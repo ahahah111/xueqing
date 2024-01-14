@@ -1,5 +1,5 @@
 # 挂载本地目录到容器中的/root/xueqing路径
-VOLUME /app
+VOLUME . /app
 
 # 设置工作目录
 WORKDIR /app
