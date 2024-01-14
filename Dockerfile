@@ -9,6 +9,7 @@ WORKDIR /app
 # 将项目代码复制到容器中
 COPY . /app
 
+RUN apt-get update && apt-get install -y maven
 # 编译应用程序
 RUN mvn clean
 RUN mvn install
