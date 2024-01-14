@@ -1,5 +1,7 @@
-# 挂载本地目录到容器中的/root/xueqing路径
-VOLUME . /app
+# 使用官方Java镜像作为基础镜像
+FROM openjdk:8-jdk-alpine
+# 挂载本地目录到容器中
+VOLUME /app
 
 # 设置工作目录
 WORKDIR /app
