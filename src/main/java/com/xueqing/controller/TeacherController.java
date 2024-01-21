@@ -30,11 +30,11 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
-    @GetMapping("/login")
-    public ResultVO login(LoginForm loginForm){
-        ResultVO resultVO = this.teacherService.login(loginForm);
-        return resultVO;
-    }
+//    @GetMapping("/login")
+//    public ResultVO login(LoginForm loginForm){
+//        ResultVO resultVO = this.teacherService.login(loginForm);
+//        return resultVO;
+//    }
 
     //添加教师
     @PostMapping("/saveTeacher")

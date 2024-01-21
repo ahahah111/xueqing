@@ -44,15 +44,15 @@ public class TbUserServiceImpl extends ServiceImpl<TbUserMapper, TbUser> impleme
         }
         else {
             ///判断密码是否相等的情况
-//            if(!tbUser.getUserPass().equals(loginForm.getPasswd())){//密码不相等
-//                resultVO.setCode(-2);
-//                resultVO.setMess("密码不相等");
-//            }
-//            else {
+            if(!tbUser.getUserPass().equals(loginForm.getPasswd())){//密码不相等
+                resultVO.setCode(-2);
+                resultVO.setMess("密码不相等");
+            }
+            else {
                 resultVO.setCode(0);//登录成功
                 resultVO.setData(tbUser);
                 resultVO.setMess("登录成功");
-//            }
+            }
 
         }
         return resultVO;

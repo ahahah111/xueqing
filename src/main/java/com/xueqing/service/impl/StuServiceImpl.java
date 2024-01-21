@@ -28,30 +28,30 @@ public class StuServiceImpl extends ServiceImpl<StuMapper, Stu> implements StuSe
     @Autowired
     private StuMapper stuMapper;
 
-    @Override
-    public ResultVO login(LoginForm loginForm) {
-        //1.判断用户是否存在
-        QueryWrapper<Stu> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("stu_name",loginForm.getUsername());
-        Stu stu = this.stuMapper.selectOne(queryWrapper);
-
-        //返回的信息
-        ResultVO resultVO = new ResultVO();
-        if(stu==null){
-            resultVO.setCode(-1);
-            resultVO.setMess("用户为空");
-        }
-        else {
-            ///判断密码是否相等的情况
-
-            //resultVO.setCode(0);//登录成功
-            resultVO.setData(stu);
-            resultVO.setMess("登录成功");
-
-
-        }
-        return resultVO;
-    }
+//    @Override
+//    public ResultVO login(LoginForm loginForm) {
+//        //1.判断用户是否存在
+//        QueryWrapper<Stu> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.eq("stu_name",loginForm.getUsername());
+//        Stu stu = this.stuMapper.selectOne(queryWrapper);
+//
+//        //返回的信息
+//        ResultVO resultVO = new ResultVO();
+//        if(stu==null){
+//            resultVO.setCode(-1);
+//            resultVO.setMess("用户为空");
+//        }
+//        else {
+//            ///判断密码是否相等的情况
+//
+//            //resultVO.setCode(0);//登录成功
+//            resultVO.setData(stu);
+//            resultVO.setMess("登录成功");
+//
+//
+//        }
+//        return resultVO;
+//    }
 
     @Override
     public PageVO list(Integer page, Integer size) {

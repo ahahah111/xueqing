@@ -37,8 +37,8 @@ import lombok.EqualsAndHashCode;
     @TableField(value = "user_mail")
     private String userMail;
 
-    @TableField(value = "user_type")
-    private String userType;
+//    @TableField(value = "user_type")
+//    private String userType;
 
 
 }

@@ -28,29 +28,29 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
     @Autowired
     private TeacherMapper teacherMapper;
 
-    @Override
-    public ResultVO login(LoginForm loginForm) {
-
-        //1.判断用户是否存在
-        QueryWrapper<Teacher> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("teacher_name",loginForm.getUsername());
-        Teacher teacher = this.teacherMapper.selectOne(queryWrapper);
-
-        //返回的信息
-        ResultVO resultVO = new ResultVO();
-        if(teacher==null){
-            resultVO.setCode(-1);
-            resultVO.setMess("用户为空");
-        }
-        else {
-            ///判断密码是否相等的情况
-            resultVO.setCode(0);//登录成功
-            resultVO.setData(teacher);
-            resultVO.setMess("登录成功");
-
-        }
-        return resultVO;
-    }
+//    @Override
+//    public ResultVO login(LoginForm loginForm) {
+//
+//        //1.判断用户是否存在
+//        QueryWrapper<Teacher> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.eq("teacher_name",loginForm.getUsername());
+//        Teacher teacher = this.teacherMapper.selectOne(queryWrapper);
+//
+//        //返回的信息
+//        ResultVO resultVO = new ResultVO();
+//        if(teacher==null){
+//            resultVO.setCode(-1);
+//            resultVO.setMess("用户为空");
+//        }
+//        else {
+//            ///判断密码是否相等的情况
+//            resultVO.setCode(0);//登录成功
+//            resultVO.setData(teacher);
+//            resultVO.setMess("登录成功");
+//
+//        }
+//        return resultVO;
+//    }
 
     @Override
     public PageVO list(Integer page, Integer size) {

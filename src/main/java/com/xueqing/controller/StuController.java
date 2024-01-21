@@ -29,11 +29,11 @@ public class StuController {
     @Autowired
     private StuService stuService;
 
-    @GetMapping("/login")
-    public ResultVO login(LoginForm loginForm){
-        ResultVO resultVO = this.stuService.login(loginForm);
-        return resultVO;
-    }
+//    @GetMapping("/login")
+//    public ResultVO login(LoginForm loginForm){
+//        ResultVO resultVO = this.stuService.login(loginForm);
+//        return resultVO;
+//    }
 
     //添加学生
     @PostMapping("/save")

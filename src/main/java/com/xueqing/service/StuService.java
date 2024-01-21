@@ -17,7 +17,7 @@ import com.xueqing.vo.ResultVO;
  */
 public interface StuService extends IService<Stu> {
 
-   public ResultVO login(LoginForm loginForm);
+//   public ResultVO login(LoginForm loginForm);
 
    public PageVO list(Integer page, Integer size);
 
