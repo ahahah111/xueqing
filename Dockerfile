@@ -10,10 +10,15 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk update && apk add --no-cache maven
 #RUN apk add --no-cache maven
 
+
+# 复制你自己的 settings.xml 文件到 Maven 配置目录
+COPY your-settings.xml /root/.m2/settings.xml
 # 编译应用程序
-copy . /app
+COPY . /app
 RUN mvn clean
-RUN mvn install
+# 编译应用程序，使用你自己的 settings.xml 文件
+RUN mvn --settings /root/.m2/settings.xml clean install
+
 RUN mvn dependency:resolve
 RUN mvn dependency:copy-dependencies
 # 设置应用程序入口点
