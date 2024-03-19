@@ -13,16 +13,16 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author admin
- * @since 2024-01-13
+ * @since 2024-03-19
  */
 @Data
   @EqualsAndHashCode(callSuper = false)
-    public class classclass implements Serializable {
+    public class Classclass implements Serializable {
 
     private static final long serialVersionUID=1L;
 
-    @TableId(value = "class_id", type = IdType.AUTO)
-    private Integer classId;
+  @TableId(value = "class_id", type = IdType.AUTO)
+  private Integer classId;
 
     private String className;
 

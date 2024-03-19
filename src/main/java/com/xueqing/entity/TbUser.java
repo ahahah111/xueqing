@@ -34,6 +34,7 @@ import lombok.EqualsAndHashCode;
 
     @TableField(value = "user_register_day")
     private LocalDateTime userRegisterDay;
+
     @TableField(value = "user_mail")
     private String userMail;
 

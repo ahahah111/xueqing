@@ -1,6 +1,6 @@
 package com.xueqing.mapper;
 
-import com.xueqing.entity.classclass;
+import com.xueqing.entity.Classclass;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,9 +10,9 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author admin
- * @since 2024-01-13
+ * @since 2024-03-19
  */
 @Mapper
-public interface ClassMapper extends BaseMapper<classclass> {
+public interface ClassclassMapper extends BaseMapper<Classclass> {
 
 }

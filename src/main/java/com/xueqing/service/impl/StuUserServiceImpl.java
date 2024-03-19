@@ -22,7 +22,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class StuUserServiceImpl extends ServiceImpl<StuUserMapper, StuUser> implements StuUserService {
 
-    @Autowired StuUserMapper stuUserMapper;
+    @Autowired
+    private StuUserMapper stuUserMapper;
 
     @Override
     public ResultVO login(LoginForm loginForm) {
@@ -44,9 +45,9 @@ public class StuUserServiceImpl extends ServiceImpl<StuUserMapper, StuUser> impl
                 resultVO.setMess("密码不相等");
             }
             else {
-            resultVO.setCode(0);//登录成功
-            resultVO.setData(stuUser);
-            resultVO.setMess("登录成功");
+                resultVO.setCode(0);//登录成功
+                resultVO.setData(stuUser);
+                resultVO.setMess("登录成功");
             }
 
         }

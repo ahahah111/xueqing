@@ -1,6 +1,6 @@
 package com.xueqing.service;
 
-import com.xueqing.entity.classclass;
+import com.xueqing.entity.Classclass;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xueqing.form.SearchForm;
 import com.xueqing.vo.PageVO;
@@ -11,9 +11,9 @@ import com.xueqing.vo.PageVO;
  * </p>
  *
  * @author admin
- * @since 2024-01-13
+ * @since 2024-03-19
  */
-public interface ClassService extends IService<classclass> {
+public interface ClassclassService extends IService<Classclass> {
 
     public PageVO list(Integer page, Integer size);
     public PageVO search(SearchForm searchForm);
