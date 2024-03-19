@@ -38,7 +38,7 @@ public class TeacherController {
 
     //添加教师
     @PostMapping("/saveTeacher")
-    public ResultVO addStu(@RequestBody Teacher teacher){
+    public ResultVO addStu(Teacher teacher){
         boolean save = this.teacherService.save(teacher);
 
         if(!save) return ResultVOUtil.fail();//返回工具类的失败的方法

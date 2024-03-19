@@ -73,5 +73,13 @@ public class ClassclassController {
         else return ResultVOUtil.success(null);
     }
 
+    //删除
+    @DeleteMapping("/deleteById/{id}")
+    public ResultVO deleteById(@PathVariable("id") Integer id){
+        boolean b = this.classclassService.removeById(id);
+        System.out.println(b);
+        if(!b) return ResultVOUtil.fail();
+        else return ResultVOUtil.success(null);
+    }
 }
 

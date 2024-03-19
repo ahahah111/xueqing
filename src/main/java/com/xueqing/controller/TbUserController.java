@@ -42,7 +42,7 @@ public class TbUserController {
 
     //添加教务人员
     @PostMapping("/save")
-    public ResultVO save(@RequestBody TbUser tbUser){
+    public ResultVO save(TbUser tbUser){
         //除了get请求，其他请求都需要添加@RequestBody
 
         boolean save = this.tbUserService.save(tbUser);//这是它本来就拥有的方法

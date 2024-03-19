@@ -30,6 +30,7 @@ public class StuUserServiceImpl extends ServiceImpl<StuUserMapper, StuUser> impl
         //1.判断用户是否存在
         QueryWrapper<StuUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name",loginForm.getUsername());
+        System.out.println(loginForm.getUsername());
         StuUser stuUser = this.stuUserMapper.selectOne(queryWrapper);
 
         //返回的信息
@@ -39,6 +40,9 @@ public class StuUserServiceImpl extends ServiceImpl<StuUserMapper, StuUser> impl
             resultVO.setMess("用户为空");
         }
         else {
+            System.out.println(stuUser.getUserName());
+            System.out.println(stuUser.getUserPass());
+            System.out.println("--------------------");
             ///判断密码是否相等的情况
             if(!stuUser.getUserPass().equals(loginForm.getPasswd())){//密码不相等
                 resultVO.setCode(-2);

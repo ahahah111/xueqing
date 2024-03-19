@@ -22,8 +22,8 @@ import lombok.EqualsAndHashCode;
 
     private static final long serialVersionUID=1L;
 
-    @TableId(value = "user_id", type = IdType.AUTO)
-    private Integer userId;
+    @TableId(value = "stu_id", type = IdType.AUTO)
+    private Integer stuId;
 
     private String userName;
 
