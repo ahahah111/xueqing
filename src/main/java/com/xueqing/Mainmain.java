@@ -44,7 +44,7 @@ public class Mainmain {
 
         //对象的策略配置————数据库的表以及字段的处理
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("stu_user","tea_user");//数据库中的表
+        strategyConfig.setInclude("behave","collection","comment","device","see_device","see_video","user_logs","video","word");//数据库中的表
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);//将下划线转成驼峰写法
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setEntityLombokModel(true); //是否添加Lombok的注解

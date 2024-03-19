@@ -22,4 +22,6 @@ public interface StuService extends IService<Stu> {
    public PageVO list(Integer page, Integer size);
 
    public PageVO search(SearchForm searchForm);
+
+//   public int removeByIds(Integer id);
 }

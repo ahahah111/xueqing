@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 
 import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 
 /**
@@ -93,6 +94,13 @@ public class TbUserController {
         System.out.println(b);
         if(!b) return ResultVOUtil.fail();
         else return ResultVOUtil.success(null);
+    }
+
+    @PostMapping("/logout")
+    public ResultVO logout (HttpServletRequest request){
+        //清理Session中的保存的当前员工的id
+        request.getSession().removeAttribute("TbUser");
+        return ResultVOUtil.success("退出成功");
     }
 
 }

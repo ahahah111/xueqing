@@ -6,6 +6,7 @@ import com.xueqing.entity.Stu;
 import com.xueqing.entity.TbUser;
 import com.xueqing.form.LoginForm;
 import com.xueqing.form.SearchForm;
+import com.xueqing.service.AttendanceService;
 import com.xueqing.service.StuService;
 import com.xueqing.util.ResultVOUtil;
 import com.xueqing.vo.PageVO;
@@ -28,7 +29,11 @@ import org.springframework.stereotype.Controller;
 public class StuController {
     @Autowired
     private StuService stuService;
+    @Autowired
+    private AttendanceService attendanceService;
 
+
+//
 //    @GetMapping("/login")
 //    public ResultVO login(LoginForm loginForm){
 //        ResultVO resultVO = this.stuService.login(loginForm);
@@ -68,10 +73,6 @@ public class StuController {
     @GetMapping("/findById/{id}")
     public ResultVO findById(@PathVariable("id") Integer id){
         Stu byId = stuService.getById(id);
-        System.out.println("=========");
-        System.out.println(byId);
-        System.out.println(id);
-        System.out.println("=========");
         return ResultVOUtil.success(byId);
     }
     //修改第二步
@@ -84,13 +85,14 @@ public class StuController {
     }
 
 
-    //删除
-    @DeleteMapping("/deleteById/{id}")
-    public ResultVO deleteById(@PathVariable("id") Integer id){
-        boolean b = this.stuService.removeById(id);
-        System.out.println(b);
-        if(!b) return ResultVOUtil.fail();
-        else return ResultVOUtil.success(null);
-    }
+//    //删除
+//    @DeleteMapping("/deleteById/{id}")
+//    public ResultVO deleteById(@PathVariable("id") Integer id){
+//
+//
+//        boolean result = this.stuService.removeByIds(id);
+//        if(result) return ResultVOUtil.success("删除成功！");
+//        else return ResultVOUtil.fail();
+//    }
 }
 

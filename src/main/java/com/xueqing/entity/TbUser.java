@@ -20,10 +20,10 @@ import lombok.EqualsAndHashCode;
 @Data
   @EqualsAndHashCode(callSuper = false)
     public class TbUser implements Serializable {
-    @TableId(type = IdType.AUTO)
+
     private static final long serialVersionUID= 6165072481836715062L;
 
-    @TableField(value = "user_id")
+    @TableId(value = "user_id", type = IdType.AUTO)
     private Integer userId;
 
     @TableField(value = "user_name")

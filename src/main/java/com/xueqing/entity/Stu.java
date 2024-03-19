@@ -24,7 +24,7 @@ import lombok.Value;
 public class Stu implements Serializable {
     private static final long serialVersionUID=1L;
 
-    @TableId(value = "stu_id")
+    @TableId(value = "stu_id", type = IdType.AUTO)
     private Integer stuId;
 //    @TableField(value = "stu_name")
     private String stuName;

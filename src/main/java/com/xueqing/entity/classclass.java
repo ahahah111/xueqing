@@ -17,11 +17,11 @@ import lombok.EqualsAndHashCode;
  */
 @Data
   @EqualsAndHashCode(callSuper = false)
-    public class Class implements Serializable {
-    @TableId(type = IdType.AUTO)
+    public class classclass implements Serializable {
+
     private static final long serialVersionUID=1L;
 
-    @TableId(value = "class_id")
+    @TableId(value = "class_id", type = IdType.AUTO)
     private Integer classId;
 
     private String className;

@@ -6,13 +6,18 @@ import com.xueqing.entity.Stu;
 import com.xueqing.entity.TbUser;
 import com.xueqing.form.LoginForm;
 import com.xueqing.form.SearchForm;
+import com.xueqing.mapper.AttendanceMapper;
 import com.xueqing.mapper.StuMapper;
+import com.xueqing.service.AttendanceService;
 import com.xueqing.service.StuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xueqing.util.ResultVOUtil;
 import com.xueqing.vo.PageVO;
 import com.xueqing.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * <p>
@@ -89,4 +94,16 @@ public class StuServiceImpl extends ServiceImpl<StuMapper, Stu> implements StuSe
         pageVO.setData(result.getRecords());
         return pageVO;
     }
+
+
+
+//    @Override
+//    public  int removeByIds(@PathVariable("id") Integer id){
+//        int b = this.stuMapper.deleteById(id);
+//        int bb = attendanceMapper.deleteById(id);
+//
+//        System.out.println(bb);
+//        System.out.println("=============================");
+//        return b+bb;
+//    }
 }
