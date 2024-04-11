@@ -29,7 +29,7 @@ public class TeaUserServiceImpl extends ServiceImpl<TeaUserMapper, TeaUser> impl
     public ResultVO login(LoginForm loginForm) {
         //1.判断用户是否存在
         QueryWrapper<TeaUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name",loginForm.getUsername());
+        queryWrapper.eq("user_id",loginForm.getUsername());
         TeaUser teaUser = this.teaUserMapper.selectOne(queryWrapper);
 
         System.out.println("+++++++++++");

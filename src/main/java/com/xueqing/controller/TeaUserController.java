@@ -36,6 +36,8 @@ public class TeaUserController {
         ResultVO resultVO = this.teaUserService.login(loginForm);
         return resultVO;
     }
+
+    //退出
     @PostMapping("/logout")
     public ResultVO logout (HttpServletRequest request){
         //清理Session中的保存的当前员工的id
@@ -43,4 +45,7 @@ public class TeaUserController {
         return ResultVOUtil.success("退出成功");
     }
 }
+
+
+
 

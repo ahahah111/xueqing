@@ -40,7 +40,6 @@ import lombok.EqualsAndHashCode;
 
     private Integer teacherId;
 
-    private Blob videoResource;
 
 
 }

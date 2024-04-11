@@ -85,14 +85,14 @@ public class StuController {
     }
 
 
-//    //删除
-//    @DeleteMapping("/deleteById/{id}")
-//    public ResultVO deleteById(@PathVariable("id") Integer id){
-//
-//
-//        boolean result = this.stuService.removeByIds(id);
-//        if(result) return ResultVOUtil.success("删除成功！");
-//        else return ResultVOUtil.fail();
-//    }
+    //删除
+    @DeleteMapping("/deleteById/{id}")
+    public ResultVO deleteById(@PathVariable("id") Integer id){
+
+
+        boolean result = this.stuService.removeById(id);
+        if(result) return ResultVOUtil.success("删除成功！");
+        else return ResultVOUtil.fail();
+    }
 }
 

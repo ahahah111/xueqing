@@ -33,7 +33,7 @@ public class TbUserServiceImpl extends ServiceImpl<TbUserMapper, TbUser> impleme
     public ResultVO login(LoginForm loginForm) {
         //1.判断用户是否存在
         QueryWrapper<TbUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name",loginForm.getUsername());
+        queryWrapper.eq("user_id",loginForm.getUsername());
         TbUser tbUser = this.tbUserMapper.selectOne(queryWrapper);
 
         //返回的信息

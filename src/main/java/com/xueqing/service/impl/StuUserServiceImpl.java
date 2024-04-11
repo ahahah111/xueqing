@@ -29,20 +29,19 @@ public class StuUserServiceImpl extends ServiceImpl<StuUserMapper, StuUser> impl
     public ResultVO login(LoginForm loginForm) {
         //1.判断用户是否存在
         QueryWrapper<StuUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name",loginForm.getUsername());
+        queryWrapper.eq("user_id",loginForm.getUsername());
         System.out.println(loginForm.getUsername());
+
         StuUser stuUser = this.stuUserMapper.selectOne(queryWrapper);
 
         //返回的信息
         ResultVO resultVO = new ResultVO();
         if(stuUser==null){
+
             resultVO.setCode(-1);
             resultVO.setMess("用户为空");
         }
         else {
-            System.out.println(stuUser.getUserName());
-            System.out.println(stuUser.getUserPass());
-            System.out.println("--------------------");
             ///判断密码是否相等的情况
             if(!stuUser.getUserPass().equals(loginForm.getPasswd())){//密码不相等
                 resultVO.setCode(-2);

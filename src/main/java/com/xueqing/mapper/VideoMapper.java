@@ -2,6 +2,7 @@ package com.xueqing.mapper;
 
 import com.xueqing.entity.Video;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xueqing.vo.PageVO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
